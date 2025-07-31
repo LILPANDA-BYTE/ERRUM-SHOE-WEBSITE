@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cartstyle.css">
+</head>
+<body>
+    <div class="cart-container">
+        <!-- Back to Homepage Button -->
+        <button class="back-button" onclick="window.location.href='/'">Back to Homepage</button>
+        
+        <table class="cart-table" id="cart-table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Cart items will be dynamically populated here -->
+            </tbody>
+        </table>
+
+        <!-- Cart Total -->
+        <div class="cart-total" id="cart-total">Total: $0</div>
+
+        <!-- Apply Coupon Section -->
+        <div class="apply-coupon">
+            <input type="text" id="coupon-code" placeholder="Enter Coupon Code">
+            <button onclick="applyCoupon()">Apply Coupon</button>
+            <div id="coupon-message" style="color: #f00;"></div>
+        </div>
+        <!-- Proceed to Checkout Button -->
+        <div class="checkout-actions">
+            <button class="proceed-button" onclick="window.location.href='checkout.html'">Proceed to Checkout</button>
+        </div>
+    </div>
+</body>
+</html>
+<script src="/cart.js"></script>
+<script src="/cartmain.js"></script>

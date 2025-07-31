@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Details</title>
+  <link rel="stylesheet" href="popupstyle.css">
+</head>
+<body>
+  <div class="popup-container">
+    <div class="popup">
+      <h2>Enter Your Payment Details</h2>
+      <form>
+        <label for="account-number">Account Number:</label>
+        <input type="text" id="account-number" name="account-number" placeholder="Enter account number" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+        <div class="buttons">
+          <button type="submit" class="confirm-btn">Confirm</button>
+          <button type="button" class="cancel-btn" id="close-btn">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

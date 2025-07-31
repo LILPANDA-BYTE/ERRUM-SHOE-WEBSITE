@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="checkoutstyle.css">
+</head>
+<body>
+  <div class="background-container">
+    <img src="img/free-photo-of-person-wearing-black-pants-and-vans-shoes.jpeg" alt="Shoe Background" class="background-image">
+    <div class="checkout-container">
+      <div class="navigation-bar">
+        <!-- Back to Cart Button -->
+        <button class="back-to-cart-btn" onclick="goToCart()">Back to Cart</button>
+      </div>
+      <h1>Select Your Payment Method</h1>
+      <div class="payment-grid">
+        <div class="payment-card" data-payment="Bank Transfer" onclick="openPopup('Bank Transfer')">
+          <img src="img/download.png" alt="Bank Transfer">
+          <span>Bank Transfer</span>
+        </div>
+        <div class="payment-card" data-payment="Bank Transfer" onclick="openPopup('Bank Transfer')">
+          <img src="img/download.png" alt="Bank Transfer">
+          <span>Bank Transfer</span>
+        </div>
+        <div class="payment-card" data-payment="PayPal" onclick="openPopup('PayPal')">
+          <img src="img/paypal.png" alt="PayPal">
+          <span>PayPal</span>
+        </div>
+        <div class="payment-card" data-payment="bKash" onclick="openPopup('bKash')">
+          <img src="img/bkash.png" alt="bKash">
+          <span>bKash</span>
+        </div>
+        <div class="payment-card" data-payment="Rocket" onclick="openPopup('Rocket')">
+          <img src="img/rocket.png" alt="Rocket">
+          <span>Rocket</span>
+        </div>
+        <div class="payment-card" data-payment="Apple Pay" onclick="openPopup('Apple Pay')">
+          <img src="img/apple pay .png" alt="Apple Pay">
+          <span>Apple Pay</span>
+        </div>
+        <div class="payment-card" data-payment="Google Pay" onclick="openPopup('Google Pay')">
+          <img src="img/google pay.png" alt="Google Pay">
+          <span>Google Pay</span>
+        </div>
+        <div class="payment-card" data-payment="Master Card" onclick="openPopup('Master Card')">
+          <img src="img/mastercard.png" alt="Master Card">
+          <span>Master Card</span>
+        </div>
+        <div class="payment-card" data-payment="Nagad" onclick="openPopup('Nagad')">
+          <img src="img/nagad.jpeg" alt="Nagad">
+          <span>Nagad</span>
+        </div>
+      </div>
+      <div class="selected-method">No payment method selected yet.</div>
+      <button class="proceed-btn">Proceed to Shipping</button>
+    </div>
+  </div>
+</body>
+<script>
+    // Function to handle back to cart navigation
+    function goToCart() {
+    // Redirect to cart page
+    window.location.href = 'cart.html';
+  }
+  function openPopup(paymentMethod) {
+  const width = 400;
+  const height = 400;
+  const left = (window.screen.width / 2) - (width / 2);
+  const top = (window.screen.height / 2) - (height / 2);
+
+  if (
+    paymentMethod === "Bank Transfer" ||
+    paymentMethod === "PayPal" ||
+    paymentMethod === "bKash" ||
+    paymentMethod === "Rocket" ||
+    paymentMethod === "Apple Pay" ||
+    paymentMethod === "Google Pay" ||
+    paymentMethod === "Master Card" ||
+    paymentMethod === "Nagad"
+  ) {
+    const popup = window.open(
+      './popup.html',
+      '_blank',
+      `width=${width},height=${height},left=${left},top=${top}`
+    );
+    if (!popup || popup.closed || typeof popup.closed === 'undefined') {
+      alert('Popup blocked. Please allow popups for this site.');
+    }
+  } else {
+    document.querySelector('.selected-method').innerText = `You selected: ${paymentMethod}`;
+  }
+}
+</script>
+</html>
