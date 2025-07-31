@@ -3,12 +3,8 @@
 ## 1. Introduction
 This repository contains the source code for a modern, responsive e-commerce website specializing in shoes. The project aims to provide a user-friendly interface for browsing products, managing a shopping cart, and proceeding through a checkout process. This document outlines the project structure, key features, technologies used, and instructions for setup and usage.
 
-
 ## Featured Shoe
-
-## Featured Shoe
-
-![Road Accident](https://imgk.timesnownews.com/story/1566913163-Haryana_Road_accident.jpg)
+![Shoe](https://placehold.co/700x350/1A535C/4ECDC4?text=ERRUM+SHOES)
 
 ## 2. Project Structure
 The project is organized into the following files and directories:
