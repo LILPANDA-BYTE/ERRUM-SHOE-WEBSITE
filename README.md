@@ -5,8 +5,7 @@ This repository contains the source code for a modern, responsive e-commerce web
 
 ## Featured Shoe
 
-![Public domain shoes](https://publicdomainpictures.net/pictures/100000/velka/mens-shoes.jpg)
-
+![Stylish sneaker on white background](https://cdn.pixabay.com/photo/2016/11/19/15/41/sneakers-1839646_1280.jpg)
 
 ## 2. Project Structure
 The project is organized into the following files and directories:
