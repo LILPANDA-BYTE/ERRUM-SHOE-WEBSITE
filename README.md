@@ -1,4 +1,3 @@
-````markdown
 # Shoe Website Project
 
 ## 1. Introduction
